@@ -34,7 +34,7 @@ function CaseStudiesPage() {
       <section className="relative pb-32 border-t border-border pt-16">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-5 sm:gap-6 md:grid-cols-2">
-            {caseStudies.map((c, i) => (
+            {caseStudies.filter((c) => !c.parentSlug).map((c, i) => (
               <CaseStudyCard key={c.slug} study={c} index={i} />
             ))}
           </div>

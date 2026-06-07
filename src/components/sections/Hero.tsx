@@ -1,11 +1,6 @@
-import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { PillLink } from "@/components/ui/pill-button";
-import { ArrowRight, Sparkles } from "lucide-react";
-
-const HeroSphere = lazy(() =>
-  import("@/components/three/HeroSphere").then((m) => ({ default: m.HeroSphere }))
-);
+import { ArrowRight } from "lucide-react";
 
 const logos = [
   "ERTHALOKA",
@@ -19,67 +14,57 @@ const logos = [
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-36 sm:pt-44 pb-24">
-      <div className="absolute inset-0 hero-gradient pointer-events-none" aria-hidden />
+    <>
+      {/* ── Full-screen video hero ── */}
+      <section className="relative h-screen overflow-hidden">
+        <video
+          src="/bg-2.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          aria-hidden
+        />
 
-      <div
-        className="pointer-events-none absolute -right-40 -top-40 size-[680px] sm:size-[820px]"
-        aria-hidden
-      >
-        <Suspense fallback={null}>
-          <HeroSphere />
-        </Suspense>
-      </div>
+        {/* Minimal top strip — just enough for nav text, touches ~15% of screen */}
+        <div
+          className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-background/50 to-transparent pointer-events-none"
+          aria-hidden
+        />
 
-      <div className="relative mx-auto max-w-7xl px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 backdrop-blur-xl px-3 py-1.5 text-xs text-muted-foreground"
-        >
-          <Sparkles className="size-3.5 text-primary-glow" />
-          Q3 engagements open — limited capacity
-        </motion.div>
+        {/* Bottom strip — tight gradient, video fully visible above this */}
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background to-transparent pt-32 pb-10">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+              <motion.h1
+                initial={{ opacity: 0, y: 22 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.93] tracking-tight"
+              >
+                Engineer the future.{" "}
+                <span className="text-foreground/65">Ship the impossible.</span>
+              </motion.h1>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="mt-8 font-display text-5xl sm:text-7xl lg:text-[5.5rem] leading-[0.95] tracking-tight text-balance max-w-4xl"
-        >
-          Engineer the future.
-          <br />
-          <span className="text-foreground/70">Ship the impossible.</span>
-        </motion.h1>
+              <motion.div
+                initial={{ opacity: 0, x: 16 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex-shrink-0 sm:pb-2"
+              >
+                <PillLink to="/contact" variant="primary" size="lg">
+                  Book a Call <ArrowRight className="size-4" />
+                </PillLink>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.25 }}
-          className="mt-8 max-w-xl text-lg text-muted-foreground text-pretty leading-relaxed"
-        >
-          Axon is a deeptech engineering studio building production-grade AI,
-          robotics, blockchain, and spatial systems for teams pushing the
-          frontier.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-10 flex flex-wrap items-center gap-3"
-        >
-          <PillLink to="/contact" variant="primary" size="lg">
-            Book a Call <ArrowRight className="size-4" />
-          </PillLink>
-          <PillLink to="/services" variant="ghost" size="lg">
-            Our Services
-          </PillLink>
-        </motion.div>
-
-        <div className="mt-28 sm:mt-40">
-          <div className="eyebrow mb-6">Trusted by 60+ frontier teams</div>
+      {/* ── Logo marquee — sits right below the video, no label ── */}
+      <div className="border-b border-border bg-background py-7">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="relative overflow-hidden">
             <div className="flex gap-16 whitespace-nowrap animate-marquee">
               {[...logos, ...logos, ...logos].map((l, i) => (
@@ -96,6 +81,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }
