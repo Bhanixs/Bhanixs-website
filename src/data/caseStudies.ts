@@ -28,6 +28,94 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: "ai-agent-command-system",
+    company: "Axon",
+    tag: "Agentic AI · Automation",
+    category: "Agentic AI",
+    title: "replaced their leadership layer with 5 autonomous AI agents",
+    summary:
+      "Five specialised agents — ARIA, Tech Lead, Ops, Client, and Calendar — run on CrewAI + Claude Sonnet, handling standups, client sales, scheduling, and PR reviews autonomously for $30–55/month.",
+    hero: {
+      headline: "AI Agent Command System — five agents, zero repetition",
+      sub: "An autonomous operating layer for founders and CTOs. Five agents handle team management, client sales, internal ops, scheduling, and code reviews — with a human only in the approval loop.",
+    },
+    stats: [
+      { k: "5", v: "Specialised agents in production" },
+      { k: "7 wks", v: "From zero to fully operational" },
+      { k: "$30–55", v: "Total monthly run cost" },
+    ],
+    stack: ["CrewAI", "Claude Sonnet", "ChromaDB", "LlamaIndex", "n8n", "FastAPI", "Supabase", "WhatsApp API", "Slack API"],
+    services: [
+      {
+        name: "ARIA — Command Center",
+        description: "Orchestrates all agents, delivers morning briefings, manages the approval queue, and surfaces exactly what needs your attention right now.",
+        deliverables: ["Morning briefing engine (8:30 AM)", "Approval queue with Approve / Edit / Reject", "Agent delegation layer"],
+      },
+      {
+        name: "Tech Lead Agent",
+        description: "Your PM, team lead, and CTO proxy. Handles interns, runs daily standups, generates architecture docs, and reviews PRs via GitHub webhook.",
+        deliverables: ["Standup automation (10 AM)", "Architecture doc generator", "PR review via Claude Sonnet"],
+      },
+      {
+        name: "Ops Agent",
+        description: "Reads every internal Slack message, classifies as Lead / Action / Decision / FYI / Noise, summarises, and drafts your reply in your tone.",
+        deliverables: ["Message classifier", "Reply drafter in your tone", "Decision logger to Supabase"],
+      },
+      {
+        name: "Client Agent — WhatsApp",
+        description: "Handles all WhatsApp client inquiries autonomously — new client pitch, FAQ handling, lead scoring, and automated follow-up sequences.",
+        deliverables: ["New client qualification flow", "Lead scorer (1–10)", "48h → Day 3 → Day 7 follow-up sequence"],
+      },
+      {
+        name: "Calendar Agent",
+        description: "Watches all channels for scheduling signals, proposes slots based on preferred hours, gets your approval, books, and briefs you 30 minutes before every call.",
+        deliverables: ["Scheduling intent detector", "Slot proposer + booking", "Pre-call brief engine"],
+      },
+    ],
+    outcomes: [
+      "Full team standup, PR review, and task assignment handled autonomously",
+      "Client WhatsApp managed 24/7 — humans only approve technical sales",
+      "Entire operating layer runs for $30–55/month on Claude + open-source infra",
+    ],
+    timeline: "7 weeks",
+    role: "Internal build · AI/ML Engineering",
+    year: "2025",
+    tone: "from-orange-500/30 to-yellow-500/10",
+    industry: "Founder Operations",
+    clientType: "Internal Build",
+    focusArea: "Agentic AI Systems",
+    domain: "axon.dev/labs",
+    challenge:
+      "Founders and CTOs lose hours every day to standups, client messages, scheduling, and PR reviews — repetitive work that blocks deep thinking. We built a 5-agent system that owns all of it autonomously, with humans only in the approval loop.",
+    solutionsIntro: "Five specialised agents, each with a defined channel and authority level, all coordinated by a central Personal Assistant:",
+    solutions: [
+      {
+        title: "ARIA",
+        description: "Command center. Morning briefings, approval queue, and the single interface between you and all five agents.",
+      },
+      {
+        title: "Tech Lead Agent",
+        description: "Handles the full tech team — standups, blocker detection, architecture docs, and PR reviews via GitHub webhook + Claude.",
+      },
+      {
+        title: "Ops Agent",
+        description: "Classifies every internal message, drafts your reply in your tone, and logs every decision to Supabase.",
+      },
+      {
+        title: "Client + Calendar",
+        description: "Client agent runs WhatsApp 24/7 with autonomous sales and lead scoring. Calendar agent books meetings across all channels.",
+      },
+    ],
+    tools: [
+      { name: "CrewAI", icon: "Bot" },
+      { name: "Claude Sonnet", icon: "MessageSquare" },
+      { name: "ChromaDB", icon: "Database" },
+      { name: "n8n", icon: "Workflow" },
+      { name: "FastAPI", icon: "Zap" },
+      { name: "Supabase", icon: "Server" },
+    ],
+  },
+  {
     slug: "erthaloka",
     company: "Erthaloka",
     tag: "Web3 · IoT · AI . SaaS . Spatial Tech",
