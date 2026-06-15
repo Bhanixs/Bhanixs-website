@@ -5,9 +5,9 @@ import { CtaBand } from "@/components/sections/CtaBand";
 export const Route = createFileRoute("/team")({
   head: () => ({
     meta: [
-      { title: "Team — Axon Deeptech" },
-      { name: "description", content: "The engineers, designers, and researchers behind Axon's frontier work." },
-      { property: "og:title", content: "Team — Axon Deeptech" },
+      { title: "Team — Bhanix" },
+      { name: "description", content: "The engineers, designers, and researchers behind Bhanix's frontier work." },
+      { property: "og:title", content: "Team — Bhanix" },
       { property: "og:description", content: "Meet the team shipping AI, robotics, blockchain, and spatial systems." },
     ],
   }),

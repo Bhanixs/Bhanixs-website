@@ -5,28 +5,28 @@ import { Brain, Cpu, Boxes, Glasses } from "lucide-react";
 const services = [
   {
     icon: Brain,
-    title: "AI / ML Engineering",
+    title: "Production AI Systems",
     body: "Custom transformer training, RAG pipelines, computer vision, evals, and inference infra ready for production scale.",
     chips: ["LLM Fine-tuning", "Computer Vision", "RAG", "Evals"],
     mock: <ModelMock />,
   },
   {
     icon: Cpu,
-    title: "Robotics & Embedded",
+    title: "Intelligent Automation",
     body: "Real-time control, sensor fusion, ROS2 stacks, and edge inference — from prototype to fleet deployment.",
     chips: ["ROS2", "Sensor Fusion", "FPGA", "Edge AI"],
     mock: <TelemetryMock />,
   },
   {
     icon: Boxes,
-    title: "Blockchain Architecture",
+    title: "Web3 & On-chain",
     body: "ZK-rollups, smart-contract audits, institutional-grade protocols and on-chain primitives that hold up.",
     chips: ["ZK Rollups", "Solidity", "Audits", "L2"],
     mock: <ChainMock />,
   },
   {
     icon: Glasses,
-    title: "AR / VR & Spatial",
+    title: "Spatial Computing",
     body: "Industrial digital twins, immersive training simulations, and spatial computing interfaces for Vision Pro and Quest.",
     chips: ["Unreal 5", "WebXR", "Digital Twins", "VisionOS"],
     mock: <SpatialMock />,
@@ -114,11 +114,11 @@ export function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: (i % 2) * 0.1 }}
-                className="group relative rounded-3xl border border-border bg-card/40 p-8 overflow-hidden hover:border-primary/40 transition-all hover:bg-card/70"
+                className="group relative rounded-3xl border border-border-strong bg-surface-card p-8 overflow-hidden hover:border-primary/40 transition-all hover:bg-surface-card-hover shadow-[inset_0_1px_0_0_oklch(1_0_0_/_0.06),0_10px_40px_-20px_oklch(0_0_0_/_0.8)]"
               >
                 <div className="absolute -right-20 -top-20 size-48 rounded-full bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                <div className="relative rounded-2xl border border-border bg-background/60 p-5 mb-8">
+                <div className="relative rounded-2xl border border-border-strong bg-background/80 p-5 mb-8">
                   {s.mock}
                 </div>
 

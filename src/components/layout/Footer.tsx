@@ -5,10 +5,10 @@ const cols = [
   {
     title: "Services",
     links: [
-      { to: "/services", label: "AI / ML Engineering" },
-      { to: "/services", label: "Robotics & Embedded" },
-      { to: "/services", label: "Blockchain" },
-      { to: "/services", label: "AR / VR & Spatial" },
+      { to: "/services", label: "Production AI Systems" },
+      { to: "/services", label: "Intelligent Automation" },
+      { to: "/services", label: "Web3 & On-chain" },
+      { to: "/services", label: "Spatial Computing" },
     ],
   },
   {
@@ -18,15 +18,6 @@ const cols = [
       { to: "/case-studies", label: "Case Studies" },
       { to: "/pricing", label: "Pricing" },
       { to: "/contact", label: "Contact" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { to: "/", label: "Insights" },
-      { to: "/", label: "Engineering Notes" },
-      { to: "/", label: "Brand" },
-      { to: "/", label: "Security" },
     ],
   },
 ];
@@ -41,10 +32,10 @@ export function Footer() {
               <span className="grid size-8 place-items-center rounded-md bg-primary shadow-[var(--shadow-glow)]">
                 <span className="block size-3.5 rounded-sm bg-primary-foreground/90" />
               </span>
-              <span className="font-display text-xl font-semibold">Axon</span>
+              <span className="font-display text-xl font-semibold">Bhanix</span>
             </div>
             <p className="mt-6 text-pretty text-muted-foreground max-w-sm leading-relaxed">
-              Axon is a deeptech engineering studio. We build the AI, robotics,
+              Bhanix is a deeptech engineering studio. We build the AI, robotics,
               on-chain, and spatial systems that move the frontier forward.
             </p>
             <Eyebrow className="mt-8">All systems operational</Eyebrow>
@@ -72,7 +63,7 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col gap-3 border-t border-border pt-8 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <span>&copy; {new Date().getFullYear()} Axon Deeptech Labs. All rights reserved.</span>
+          <span>&copy; {new Date().getFullYear()} Bhanix. All rights reserved.</span>
           <span className="font-mono tracking-widest">v.04 / MIDNIGHT</span>
         </div>
       </div>

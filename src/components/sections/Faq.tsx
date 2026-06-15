@@ -48,7 +48,7 @@ export function Faq() {
             <AccordionItem
               key={i}
               value={`item-${i}`}
-              className="rounded-2xl border border-border bg-card/40 px-6 data-[state=open]:border-primary/40"
+              className="rounded-2xl border border-border-strong bg-surface-card px-6 data-[state=open]:border-primary/40"
             >
               <AccordionTrigger className="text-left font-display text-lg tracking-tight hover:no-underline py-5">
                 {it.q}

@@ -3,7 +3,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 const items = [
   {
     quote:
-      "Axon shipped a production RAG pipeline in 6 weeks that our last vendor quoted us 9 months for. Senior team, zero hand-holding.",
+      "Bhanix shipped a production RAG pipeline in 6 weeks that our last vendor quoted us 9 months for. Senior team, zero hand-holding.",
     name: "David M.",
     role: "VP Engineering, Vertex Solutions",
   },
@@ -21,7 +21,7 @@ const items = [
   },
   {
     quote:
-      "Spatial computing felt like a black box until Axon. They built our Vision Pro training simulator and our surgeons love it.",
+      "Spatial computing felt like a black box until Bhanix. They built our Vision Pro training simulator and our surgeons love it.",
     name: "Clara D.",
     role: "Head of Product, NovaPath Health",
   },

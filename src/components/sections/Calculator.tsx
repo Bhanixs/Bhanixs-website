@@ -18,7 +18,7 @@ export function Calculator() {
   return (
     <section className="relative py-32 sm:py-40 border-t border-border">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="rounded-3xl border border-border bg-card/40 p-8 sm:p-12 overflow-hidden relative">
+        <div className="rounded-3xl border border-border-strong bg-surface-card p-8 sm:p-12 overflow-hidden relative">
           <div className="absolute -right-40 -top-40 size-[500px] rounded-full bg-primary/15 blur-3xl pointer-events-none" />
 
           <div className="relative grid gap-12 lg:grid-cols-2 lg:items-center">
@@ -29,7 +29,7 @@ export function Calculator() {
               </h2>
               <p className="mt-5 text-muted-foreground text-pretty">
                 Move the sliders. We will show you the monthly hours and dollars
-                your team is spending on work an Axon system could absorb.
+                your team is spending on work a Bhanix system could absorb.
               </p>
 
               <div className="mt-10 space-y-8">
@@ -45,13 +45,13 @@ export function Calculator() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-border bg-background/60 p-8">
+            <div className="rounded-2xl border border-border-strong bg-background/80 p-8">
               <div className="eyebrow">Monthly impact</div>
               <div className="mt-4 font-display text-5xl sm:text-6xl tracking-tight">
                 ${savings.toLocaleString()}
               </div>
               <p className="mt-2 text-muted-foreground">
-                Potential monthly savings with an Axon engagement.
+                Potential monthly savings with a Bhanix engagement.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <Stat k={`${monthlyHours.toLocaleString()} h`} v="Lost to manual work" />

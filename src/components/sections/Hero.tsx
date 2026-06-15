@@ -3,13 +3,12 @@ import { PillLink } from "@/components/ui/pill-button";
 import { ArrowRight } from "lucide-react";
 
 const logos = [
-  "ERTHALOKA",
-  "ARTECO",
-  "CRAVENT",
-  "TRAVELLERS TRIIBE",
-  "VALONK",
-  "XPLORED",
-  "VIVIUM",
+  { name: "Erthaloka", src: "/logo%27s/Copy%20of%20Erthaloka%20Green%20Logo.png" },
+  { name: "Arteco", src: "/logo%27s/Copy%20of%20FINAL%20LOGO%20APRIL-04.png" },
+  { name: "Cravent", src: "/logo%27s/Copy%20of%20cravent-logo-WORDMARKTAGLINE-1.jpg" },
+  { name: "Travellers Triibe", src: "/logo%27s/Copy%20of%20Artboard%209%20transparent.png" },
+  { name: "XplorED", src: "/logo%27s/Copy%20of%20Artboard%202.png" },
+  { name: "Vivium", src: "/logo%27s/Copy%20of%20vivium%20logo.jpg.jpeg" },
 ];
 
 export function Hero() {
@@ -17,12 +16,9 @@ export function Hero() {
     <>
       {/* ── Full-screen video hero ── */}
       <section className="relative h-screen overflow-hidden">
-        <video
-          src="/bg-2.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
+        <img
+          src="/bg--bhanix.jpg"
+          alt=""
           className="absolute inset-0 w-full h-full object-cover"
           aria-hidden
         />
@@ -66,14 +62,18 @@ export function Hero() {
       <div className="border-b border-border bg-background py-7">
         <div className="mx-auto max-w-7xl px-6">
           <div className="relative overflow-hidden">
-            <div className="flex gap-16 whitespace-nowrap animate-marquee">
+            <div className="flex items-center gap-10 whitespace-nowrap animate-marquee">
               {[...logos, ...logos, ...logos].map((l, i) => (
-                <span
+                <div
                   key={i}
-                  className="font-display text-2xl tracking-[0.3em] text-muted-foreground/40"
+                  className="shrink-0 bg-white rounded-lg px-4 py-2 h-11 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity"
                 >
-                  {l}
-                </span>
+                  <img
+                    src={l.src}
+                    alt={l.name}
+                    className="h-full max-w-[120px] object-contain"
+                  />
+                </div>
               ))}
             </div>
             <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />

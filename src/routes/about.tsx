@@ -5,9 +5,9 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Axon Deeptech" },
-      { name: "description", content: "Axon is a small studio of senior engineers building production deeptech systems for frontier teams." },
-      { property: "og:title", content: "About — Axon Deeptech" },
+      { title: "About — Bhanix" },
+      { name: "description", content: "Bhanix is a small studio of senior engineers building production deeptech systems for frontier teams." },
+      { property: "og:title", content: "About — Bhanix" },
       { property: "og:description", content: "A small studio of senior engineers shipping production deeptech." },
     ],
   }),
@@ -36,9 +36,9 @@ function AboutPage() {
             A small studio for <span className="text-foreground/70">hard problems.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground text-pretty leading-relaxed">
-            Axon was founded by a group of engineers who had spent a decade
+            Bhanix was founded by a group of engineers who had spent a decade
             shipping deeptech inside Boston Dynamics, DeepMind, Anduril, and
-            Coinbase. We started Axon to do the same work without the
+            Coinbase. We started Bhanix to do the same work without the
             corporate gravity — for teams that need to move fast and build
             things that haven&rsquo;t been built before.
           </p>
@@ -50,7 +50,7 @@ function AboutPage() {
           <Eyebrow>Principles</Eyebrow>
           <div className="mt-12 grid gap-5 md:grid-cols-2">
             {principles.map((p) => (
-              <div key={p.k} className="rounded-3xl border border-border bg-card/40 p-8">
+              <div key={p.k} className="rounded-3xl border border-border-strong bg-surface-card p-8">
                 <h3 className="font-display text-2xl tracking-tight">{p.k}</h3>
                 <p className="mt-3 text-muted-foreground leading-relaxed">{p.v}</p>
               </div>
@@ -69,7 +69,7 @@ function AboutPage() {
           </div>
           <div className="flex flex-wrap gap-3">
             {locations.map((l) => (
-              <span key={l} className="rounded-full border border-border bg-card/40 px-5 py-2 font-mono text-xs tracking-widest uppercase">
+              <span key={l} className="rounded-full border border-border-strong bg-surface-card px-5 py-2 font-mono text-xs tracking-widest uppercase">
                 {l}
               </span>
             ))}

@@ -23,10 +23,10 @@ export const Route = createFileRoute("/case-studies/$slug")({
   },
   head: ({ loaderData }) => {
     const s = loaderData?.study;
-    if (!s) return { meta: [{ title: "Case study not found — Axon" }] };
+    if (!s) return { meta: [{ title: "Case study not found — Bhanix" }] };
     return {
       meta: [
-        { title: `${s.company} — ${s.title} | Axon Case Study` },
+        { title: `${s.company} — ${s.title} | Bhanix Case Study` },
         { name: "description", content: s.summary },
         { property: "og:title", content: `${s.company} — ${s.title}` },
         { property: "og:description", content: s.summary },

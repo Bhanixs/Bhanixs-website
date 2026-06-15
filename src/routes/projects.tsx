@@ -8,10 +8,10 @@ import { CaseStudyCard } from "@/components/case/CaseStudyCard";
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Projects — Axon Deeptech" },
-      { name: "description", content: "Every system Axon has shipped — across Web3, AR/VR, Agentic AI, Cloud, EdTech, Travel, and E-commerce." },
-      { property: "og:title", content: "Projects — Axon Deeptech" },
-      { property: "og:description", content: "Every system Axon has shipped — across deeptech verticals." },
+      { title: "Projects — Bhanix" },
+      { name: "description", content: "Every system Bhanix has shipped — across Web3, AR/VR, Agentic AI, Cloud, EdTech, Travel, and E-commerce." },
+      { property: "og:title", content: "Projects — Bhanix" },
+      { property: "og:description", content: "Every system Bhanix has shipped — across deeptech verticals." },
     ],
   }),
   component: ProjectsPage,

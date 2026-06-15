@@ -18,10 +18,10 @@ import { Mail, MapPin, Phone } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Axon Deeptech" },
+      { title: "Contact — Bhanix" },
       { name: "description", content: "Tell us about the deeptech system you want to build. We respond within 48 hours." },
-      { property: "og:title", content: "Contact — Axon Deeptech" },
-      { property: "og:description", content: "Start a deeptech engagement with Axon." },
+      { property: "og:title", content: "Contact — Bhanix" },
+      { property: "og:description", content: "Start a deeptech engagement with Bhanix." },
     ],
   }),
   component: ContactPage,
@@ -66,7 +66,7 @@ function ContactPage() {
 
           <form
             onSubmit={onSubmit}
-            className="rounded-3xl border border-border bg-card/60 backdrop-blur-xl p-8 space-y-5"
+            className="rounded-3xl border border-border-strong bg-surface-card backdrop-blur-xl p-8 space-y-5"
           >
             <div className="grid sm:grid-cols-2 gap-5">
               <Field label="Your name"><Input name="name" required placeholder="Ada Lovelace" /></Field>
@@ -120,7 +120,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 
 function Channel({ icon: Icon, k, v }: { icon: typeof Mail; k: string; v: string }) {
   return (
-    <div className="flex items-start gap-4 rounded-2xl border border-border bg-card/40 p-5">
+    <div className="flex items-start gap-4 rounded-2xl border border-border-strong bg-surface-card p-5">
       <div className="grid size-10 place-items-center rounded-xl bg-primary/15 text-primary-glow ring-1 ring-primary/30">
         <Icon className="size-4" />
       </div>

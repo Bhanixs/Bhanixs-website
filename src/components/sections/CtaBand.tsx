@@ -5,7 +5,7 @@ export function CtaBand() {
   return (
     <section className="relative py-24 sm:py-32 border-t border-border">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="relative overflow-hidden rounded-3xl border border-primary/40 bg-card/60 p-10 sm:p-16 text-center">
+        <div className="relative overflow-hidden rounded-3xl border border-primary/40 bg-surface-card p-10 sm:p-16 text-center">
           <div className="absolute inset-0 hero-gradient pointer-events-none" />
           <div className="absolute -right-24 -bottom-24 size-[400px] rounded-full bg-primary/20 blur-3xl pointer-events-none" />
 

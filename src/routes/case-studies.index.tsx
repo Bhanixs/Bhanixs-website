@@ -7,9 +7,9 @@ import { CaseStudyCard } from "@/components/case/CaseStudyCard";
 export const Route = createFileRoute("/case-studies/")({
   head: () => ({
     meta: [
-      { title: "Case Studies — Axon Deeptech" },
-      { name: "description", content: "Production deeptech systems Axon has shipped — robotics, AI, blockchain, and spatial." },
-      { property: "og:title", content: "Case Studies — Axon Deeptech" },
+      { title: "Case Studies — Bhanix" },
+      { name: "description", content: "Production deeptech systems Bhanix has shipped — robotics, AI, blockchain, and spatial." },
+      { property: "og:title", content: "Case Studies — Bhanix" },
       { property: "og:description", content: "Selected work across robotics, AI, blockchain, and spatial systems." },
     ],
   }),

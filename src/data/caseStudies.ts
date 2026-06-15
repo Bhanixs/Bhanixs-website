@@ -33,7 +33,7 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "ai-agent-command-system",
-    company: "Axon",
+    company: "Bhanix",
     tag: "Agentic AI · Automation",
     category: "Agentic AI",
     title: "replaced their leadership layer with 5 autonomous AI agents",
@@ -88,7 +88,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "Founder Operations",
     clientType: "Internal Build",
     focusArea: "Agentic AI Systems",
-    domain: "axon.dev/labs",
+    domain: "bhanix.dev/labs",
     challenge:
       "Founders and CTOs lose hours every day to standups, client messages, scheduling, and PR reviews — repetitive work that blocks deep thinking. We built a 5-agent system that owns all of it autonomously, with humans only in the approval loop.",
     solutionsIntro: "Five specialised agents, each with a defined channel and authority level, all coordinated by a central Personal Assistant:",
@@ -124,7 +124,7 @@ export const caseStudies: CaseStudy[] = [
     company: "Erthaloka",
     tag: "Web3 · IoT · AI . SaaS . Spatial Tech",
     category: "Web3",
-    title: "A planetary-scale tech backbone for climate action",
+    title: "built a planetary-scale tech backbone for climate action",
     summary:
       "DAO governance, NFT carbon market, custom IoT sensor mesh, AI reporting and geospatial intelligence unified in one SaaS.",
     hero: {
@@ -155,6 +155,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "Sustainability",
     clientType: "DAO / Climate Marketplace",
     focusArea: "Web3 + AI + IoT",
+    logoUrl: "/logo%27s/Copy%20of%20Erthaloka%20Green%20Logo.png",
     domain: "erthaloka.org",
     challenge:
       "Erthaloka needed a single technology backbone for climate action — DAO governance, a tradable carbon market, live environmental telemetry, and audit-ready reporting — all running in production, not as a pitch deck.",
@@ -174,7 +175,7 @@ export const caseStudies: CaseStudy[] = [
       { name: "MQTT", icon: "Radio" },
     ],
     feedback: {
-      quote: "Axon shipped what most teams only diagram — governance, market, sensors, and reporting, all live, all owned by us.",
+      quote: "Bhanix shipped what most teams only diagram — governance, market, sensors, and reporting, all live, all owned by us.",
       name: "Erthaloka Core Team",
       role: "Founders, Erthaloka",
     },
@@ -385,6 +386,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "AR / VR",
     clientType: "F&B + AEC Studios",
     focusArea: "Spatial Computing",
+    logoUrl: "/logo%27s/Copy%20of%20FINAL%20LOGO%20APRIL-04.png",
     domain: "arteco.studio",
     challenge:
       "Arteco's clients across restaurants and construction needed spatial experiences that worked on the devices people already own — without a six-month build cycle per project.",
@@ -701,6 +703,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "Marketing / SaaS",
     clientType: "Performance Marketing",
     focusArea: "Agentic AI Systems",
+    logoUrl: "/logo%27s/Copy%20of%20cravent-logo-WORDMARKTAGLINE-1.jpg",
     domain: "cravent.ai",
     challenge:
       "Cravent's team was drowning in manual campaign ops — briefs, creatives, launches, and reporting across two ad platforms — leaving no time for strategy.",
@@ -761,6 +764,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "Travel",
     clientType: "Consumer Marketplace",
     focusArea: "Cross-platform + AI",
+    logoUrl: "/logo%27s/Copy%20of%20Artboard%209%20transparent.png",
     domain: "travellerstriibe.com",
     challenge:
       "Travellers Triibe wanted a single product across web and mobile with personalized itineraries and real, multi-currency payments — not a brochure site.",
@@ -874,6 +878,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "EdTech",
     clientType: "Early-stage Founder",
     focusArea: "Full Product Build",
+    logoUrl: "/logo%27s/Copy%20of%20Artboard%202.png",
     domain: "xplored.app",
     challenge:
       "XplorED's founder had a vision for AI-personalized learning with a live community — and needed an engineering team to turn it into a shipped product, not a prototype.",
@@ -931,6 +936,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "Handicrafts / E-commerce",
     clientType: "Artisan Marketplace",
     focusArea: "Commerce + Supply Chain",
+    logoUrl: "/logo%27s/Copy%20of%20vivium%20logo.jpg.jpeg",
     domain: "vivium.shop",
     challenge:
       "Vivium needed to bring 200+ traditional artisans online with real storefronts, real payments, and a supply chain they could actually see — in weeks, not quarters.",
@@ -982,9 +988,9 @@ export const caseStudies: CaseStudy[] = [
     year: "2024–2025",
     tone: "from-violet-500/30 to-indigo-500/10",
     industry: "Internal R&D",
-    clientType: "Axon Labs",
+    clientType: "Bhanix Labs",
     focusArea: "Deep-tech Accelerators",
-    domain: "axon.dev/labs",
+    domain: "bhanix.dev/labs",
     challenge:
       "Every client engagement was re-solving the same hard problems — agent observability, AR delivery, credential proofs, deploy pipelines. We needed accelerators we owned.",
     solutionsIntro: "We built four internal products we run our own ops on, then reuse on client work:",

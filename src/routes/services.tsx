@@ -7,9 +7,9 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Axon Deeptech" },
+      { title: "Services — Bhanix" },
       { name: "description", content: "AI / ML, robotics & embedded, blockchain, and AR/VR engineering — shipped by senior squads." },
-      { property: "og:title", content: "Services — Axon Deeptech" },
+      { property: "og:title", content: "Services — Bhanix" },
       { property: "og:description", content: "AI / ML, robotics, blockchain, and spatial engineering services." },
     ],
   }),

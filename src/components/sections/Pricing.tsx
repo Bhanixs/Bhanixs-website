@@ -87,8 +87,8 @@ export function Pricing() {
             <div
               key={t.name}
               className={cn(
-                "relative rounded-3xl border border-border bg-card/40 p-8 flex flex-col",
-                t.featured && "border-primary/60 bg-card/70 shadow-[var(--shadow-glow)]"
+                "relative rounded-3xl border border-border-strong bg-surface-card p-8 flex flex-col shadow-[inset_0_1px_0_0_oklch(1_0_0_/_0.06),0_10px_40px_-20px_oklch(0_0_0_/_0.8)]",
+                t.featured && "border-primary/60 bg-surface-card-hover shadow-[var(--shadow-glow)]"
               )}
             >
               {t.featured && (
