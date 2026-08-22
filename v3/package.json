@@ -1,0 +1,10 @@
+{
+  "name": "bhanixs-website-v3",
+  "version": "3.0.0",
+  "private": true,
+  "description": "BHANIXS marketing site — static HTML/CSS/JS rebuild per the BHANIXS Complete Website Rebuild Brief.",
+  "scripts": {
+    "generate": "node generate-case-studies.cjs",
+    "dev": "python3 -m http.server 8743"
+  }
+}

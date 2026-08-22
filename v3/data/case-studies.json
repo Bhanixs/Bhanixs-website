@@ -1,0 +1,231 @@
+[
+  {
+    "slug": "erthaloka",
+    "company": "Erthaloka",
+    "domainTag": "Blockchain & Decentralised Infrastructure",
+    "category": "Web3 · IoT · AI",
+    "logo": "assets/clients/erthaloka.png",
+    "headline": "A planetary-scale technology backbone for climate action.",
+    "sub": "Four production modules unified under one platform: Web3 governance, NFT-based carbon credits, an IoT sensor mesh, and AI-driven sustainability reporting.",
+    "challenge": "Erthaloka needed a single technology backbone for climate action — DAO governance, a tradable carbon market, live environmental telemetry, and audit-ready reporting — all running in production, not as a pitch deck.",
+    "solutionsIntro": "We built a unified platform that puts governance, markets, sensors, and reporting under one roof:",
+    "solutions": [
+      { "title": "DAO Governance", "description": "Token-weighted voting, treasury, and proposal lifecycle shipped as audited Solidity contracts." },
+      { "title": "NFT Carbon Market", "description": "Tokenized carbon credits with provenance, retirement, and on-chain settlement." },
+      { "title": "IoT Sensor Mesh", "description": "Custom firmware and an MQTT pipeline streaming environmental data from field to cloud." },
+      { "title": "AI Reporting", "description": "ML models turning raw sensor and satellite data into auditable sustainability reports." }
+    ],
+    "stats": [
+      { "k": "4", "v": "Modules live in production" },
+      { "k": "60%", "v": "Less manual reporting" },
+      { "k": "1", "v": "Unified platform" }
+    ],
+    "tools": ["Solidity", "Polygon", "TensorFlow", "Next.js", "AWS", "MQTT"],
+    "timeline": "9 months",
+    "year": "2024",
+    "feedback": {
+      "quote": "Bhanixs shipped what most teams only diagram — governance, market, sensors, and reporting, all live, all owned by us.",
+      "name": "Erthaloka Core Team",
+      "role": "Founders, Erthaloka"
+    }
+  },
+  {
+    "slug": "erthas-exchange",
+    "company": "ErthaExchange",
+    "domainTag": "Blockchain & Decentralised Infrastructure",
+    "category": "Web3 · Marketplace",
+    "logo": null,
+    "headline": "A coin-powered marketplace for circular services.",
+    "sub": "A digital wallet system, service discovery, and user dashboard connecting a growing user base to hundreds of services from verified organisations.",
+    "challenge": "The Erthaloka ecosystem needed a real marketplace where its native coin could unlock tangible services — from co-living spaces to sustainable travel — with a trust layer of verified organisations and a seamless user experience.",
+    "solutionsIntro": "We built a full coin-powered marketplace with wallet, discovery, booking, and admin layers:",
+    "solutions": [
+      { "title": "Digital Wallet", "description": "Secure coin wallet with top-up, balance tracking, and full transaction history." },
+      { "title": "Service Marketplace", "description": "Browse and book services across ten-plus categories from verified organisations." },
+      { "title": "User Dashboard", "description": "A personalised view of wallet, bookings, spending, and account status." },
+      { "title": "Admin Portal", "description": "A JWT-secured admin layer for managing the full platform ecosystem." }
+    ],
+    "stats": [
+      { "k": "1000+", "v": "Active users" },
+      { "k": "500+", "v": "Listed services" },
+      { "k": "50k+", "v": "Coins traded" }
+    ],
+    "tools": ["Next.js", "Supabase", "PostgreSQL", "JWT Auth", "Node.js", "Cloudflare"],
+    "timeline": "6 months",
+    "year": "2024"
+  },
+  {
+    "slug": "erthanomy",
+    "company": "Erthanomy",
+    "domainTag": "Blockchain & Decentralised Infrastructure",
+    "category": "DeFi · Tokenomics",
+    "logo": null,
+    "headline": "A circular economy powered by on-chain infrastructure.",
+    "sub": "A complete on-chain economic layer: an ERC-20 utility token, DAO governance, DeFi lending, an NFT marketplace, and a DApp — built for the Erthaloka ecosystem.",
+    "challenge": "The Erthaloka circular economy needed a native token and decentralised economic infrastructure — payments, governance, and DeFi — built transparently on-chain without relying on centralised intermediaries.",
+    "solutionsIntro": "We built the full on-chain economic layer for the ecosystem:",
+    "solutions": [
+      { "title": "ERT Token", "description": "An ERC-20 utility and governance token with a transparent allocation model on Ethereum." },
+      { "title": "DAO Governance", "description": "A smart-contract-based proposal and voting system for token-holder governance." },
+      { "title": "DeFi Protocol", "description": "A microloan and borrowing protocol generating interest revenue on-chain." },
+      { "title": "DApp + NFT", "description": "A marketplace DApp with payments, subscriptions, and an integrated NFT engine." }
+    ],
+    "stats": [
+      { "k": "ERC-20", "v": "Token live on Ethereum" },
+      { "k": "5", "v": "On-chain features" },
+      { "k": "100%", "v": "Decentralised governance" }
+    ],
+    "tools": ["Solidity", "Ethereum", "Web3.js", "Next.js", "IPFS", "Hardhat"],
+    "timeline": "8 months",
+    "year": "2024"
+  },
+  {
+    "slug": "arteco",
+    "company": "Arteco",
+    "domainTag": "Spatial Computing & Digital Twins",
+    "category": "AR / VR",
+    "logo": "assets/clients/arteco.png",
+    "headline": "Spatial computing across three verticals.",
+    "sub": "Three production AR/VR applications — restaurant AR menus, BIM-to-AR construction overlays, and immersive VR architecture walkthroughs — on one shared pipeline.",
+    "challenge": "Arteco's clients across restaurants and construction needed spatial experiences that worked on the devices people already own — without a six-month build cycle per project.",
+    "solutionsIntro": "We built three production spatial apps on a shared asset and tooling pipeline:",
+    "solutions": [
+      { "title": "AR Menus", "description": "Photoreal 3D dishes anchored on the table with allergen and nutrition overlays." },
+      { "title": "BIM → AR", "description": "Converting BIM models into mobile AR overlays site teams can walk through in minutes." },
+      { "title": "VR Walkthroughs", "description": "Quest-ready immersive walkthroughs for client presentations and design review." },
+      { "title": "Shared Pipeline", "description": "One asset and build pipeline powering iOS, Android, and Quest from the same source." }
+    ],
+    "stats": [
+      { "k": "3", "v": "AR / VR apps shipped" },
+      { "k": "<5 min", "v": "BIM to AR conversion" },
+      { "k": "iOS · Android · Quest", "v": "Platforms" }
+    ],
+    "tools": ["Unity", "Unreal Engine", "ARKit", "ARCore", "Three.js", "Autodesk Forge"],
+    "timeline": "7 months",
+    "year": "2024"
+  },
+  {
+    "slug": "cravent",
+    "company": "Cravent",
+    "domainTag": "AI & Intelligent Systems",
+    "category": "Agentic AI",
+    "logo": "assets/clients/cravent.jpg",
+    "headline": "A four-agent system for autonomous marketing operations.",
+    "sub": "Research, creative, ops, and analytics agents coordinate end-to-end across Meta and Google, with humans in the loop only for approvals.",
+    "challenge": "Cravent's team was drowning in manual campaign operations — briefs, creatives, launches, and reporting across two ad platforms — leaving no time for strategy.",
+    "solutionsIntro": "We built a four-agent system that owns the campaign lifecycle end-to-end:",
+    "solutions": [
+      { "title": "Research Agent", "description": "Pulls audience, competitor, and trend data into structured briefs." },
+      { "title": "Creative Agent", "description": "Generates ad variants — copy, image prompts, hooks — from briefs." },
+      { "title": "Ops Agent", "description": "Pushes approved creatives live to Meta and Google with budget guardrails." },
+      { "title": "Analytics Agent", "description": "Watches performance, flags winners and losers, recommends reallocations." }
+    ],
+    "stats": [
+      { "k": "70%", "v": "Faster campaign setup" },
+      { "k": "3×", "v": "More A/B tests run" },
+      { "k": "4", "v": "Coordinated agents" }
+    ],
+    "tools": ["CrewAI", "LangChain", "GPT-4", "Claude", "Meta Ads API", "Google Ads API"],
+    "timeline": "5 months",
+    "year": "2025"
+  },
+  {
+    "slug": "travellers-triibe",
+    "company": "Travellers Triibe",
+    "domainTag": "AI & Intelligent Systems",
+    "category": "Travel · AI",
+    "logo": "assets/clients/travellers-triibe.png",
+    "headline": "AI-personalised travel, across web and mobile.",
+    "sub": "A cross-platform app and web product with AI-personalised itineraries and PCI-compliant multi-currency payments.",
+    "challenge": "Travellers Triibe wanted a single product across web and mobile with personalised itineraries and real, multi-currency payments — not a brochure site.",
+    "solutionsIntro": "We shipped a full product on one shared engineering core:",
+    "solutions": [
+      { "title": "Mobile App", "description": "A React Native iOS and Android app with offline-friendly trip data." },
+      { "title": "Web Product", "description": "A Next.js web app sharing the same APIs and personalisation layer." },
+      { "title": "AI Itineraries", "description": "Recommendations personalise trips, stays, and experiences in real time." },
+      { "title": "Global Payments", "description": "A PCI-compliant Stripe flow with multi-currency, FX, and refunds." }
+    ],
+    "stats": [
+      { "k": "2", "v": "Platforms shipped" },
+      { "k": "Multi-CCY", "v": "Payments live" },
+      { "k": "PCI", "v": "Compliant flow" }
+    ],
+    "tools": ["React Native", "Next.js", "TensorFlow", "Stripe", "AWS", "PostgreSQL"],
+    "timeline": "8 months",
+    "year": "2024"
+  },
+  {
+    "slug": "xplored",
+    "company": "XplorED",
+    "domainTag": "AI & Intelligent Systems",
+    "category": "EdTech · AI",
+    "logo": "assets/clients/xplored.png",
+    "headline": "From founder vision to a live learning platform.",
+    "sub": "Web, mobile, AI-personalised learning paths, and a real-time community layer, taken from idea to production.",
+    "challenge": "XplorED's founder had a vision for AI-personalised learning with a live community — and needed an engineering team to turn it into a shipped product, not a prototype.",
+    "solutionsIntro": "We built the full product across surfaces, models, and real-time layers:",
+    "solutions": [
+      { "title": "Web Platform", "description": "A Next.js learner and instructor experience with SSR and SEO surfaces." },
+      { "title": "Mobile App", "description": "A React Native iOS and Android app with offline lesson caching and push." },
+      { "title": "AI Paths", "description": "Personalises path, pace, and reinforcement per learner." },
+      { "title": "Live Community", "description": "Real-time chat, study rooms, and instructor Q&A via WebSockets." }
+    ],
+    "stats": [
+      { "k": "Idea → Product", "v": "Full cycle" },
+      { "k": "Web + Mobile", "v": "Shipped" },
+      { "k": "Real-time", "v": "Community layer" }
+    ],
+    "tools": ["Next.js", "React Native", "GPT-4", "MongoDB", "Firebase", "WebSockets"],
+    "timeline": "10 months",
+    "year": "2024"
+  },
+  {
+    "slug": "valonk",
+    "company": "Valonk",
+    "domainTag": "Engineering & Cloud Infrastructure",
+    "category": "Cloud · DevOps",
+    "logo": null,
+    "headline": "A full e-commerce performance rebuild.",
+    "sub": "Re-architected infrastructure, CI/CD, and observability. Core Web Vitals all green, page load down from 4.2s to 1.1s.",
+    "challenge": "Valonk's storefront was buckling under traffic with four-plus second page loads, brittle deploys, and no real observability — directly costing them conversion.",
+    "solutionsIntro": "We rebuilt the platform foundations end-to-end:",
+    "solutions": [
+      { "title": "Infra Rebuild", "description": "Moved from a brittle single-region setup to a Cloudflare-fronted AWS stack." },
+      { "title": "CI/CD Pipelines", "description": "GitHub Actions with preview environments, tests, and zero-downtime deploys." },
+      { "title": "Observability", "description": "Grafana, Prometheus, and logs with paging on real user-impacting symptoms." },
+      { "title": "Performance Tuning", "description": "Image, font, and bundle work taking Core Web Vitals all green." }
+    ],
+    "stats": [
+      { "k": "4.2s → 1.1s", "v": "Page load" },
+      { "k": "99.9%", "v": "Uptime" },
+      { "k": "+18%", "v": "Conversion lift" }
+    ],
+    "tools": ["AWS", "Cloudflare", "Docker", "Terraform", "Grafana", "GitHub Actions"],
+    "timeline": "4 months",
+    "year": "2024"
+  },
+  {
+    "slug": "vivium",
+    "company": "Vivium",
+    "domainTag": "Engineering & Cloud Infrastructure",
+    "category": "E-commerce",
+    "logo": "assets/clients/vivium.jpg",
+    "headline": "Digitising handicraft commerce.",
+    "sub": "A mobile app, web storefront, payments, and a supply-chain dashboard tracking 200-plus artisans from workshop to doorstep.",
+    "challenge": "Vivium needed to bring 200-plus traditional artisans online with real storefronts, real payments, and a supply chain they could actually see — in weeks, not quarters.",
+    "solutionsIntro": "We shipped a full commerce stack with an artisan-first operations layer:",
+    "solutions": [
+      { "title": "Mobile Storefront", "description": "A React Native iOS and Android storefront with localised payments." },
+      { "title": "Web Storefront", "description": "A Next.js storefront tuned for SEO and rich product storytelling." },
+      { "title": "Supply Chain", "description": "A dashboard tracking artisans, inventory, and fulfilment to doorstep." }
+    ],
+    "stats": [
+      { "k": "200+", "v": "Artisans onboarded" },
+      { "k": "8 wks", "v": "To MVP" },
+      { "k": "Web + Mobile", "v": "Storefronts" }
+    ],
+    "tools": ["React Native", "Next.js", "Shopify", "Razorpay", "MongoDB", "Node.js"],
+    "timeline": "8 weeks to MVP",
+    "year": "2024"
+  }
+]
