@@ -32,94 +32,6 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "ai-agent-command-system",
-    company: "Bhanix",
-    tag: "Agentic AI · Automation",
-    category: "Agentic AI",
-    title: "replaced their leadership layer with 5 autonomous AI agents",
-    summary:
-      "Five specialised agents — ARIA, Tech Lead, Ops, Client, and Calendar — run on CrewAI + Claude Sonnet, handling standups, client sales, scheduling, and PR reviews autonomously for $30–55/month.",
-    hero: {
-      headline: "AI Agent Command System — five agents, zero repetition",
-      sub: "An autonomous operating layer for founders and CTOs. Five agents handle team management, client sales, internal ops, scheduling, and code reviews — with a human only in the approval loop.",
-    },
-    stats: [
-      { k: "5", v: "Specialised agents in production" },
-      { k: "7 wks", v: "From zero to fully operational" },
-      { k: "$30–55", v: "Total monthly run cost" },
-    ],
-    stack: ["CrewAI", "Claude Sonnet", "ChromaDB", "LlamaIndex", "n8n", "FastAPI", "Supabase", "WhatsApp API", "Slack API"],
-    services: [
-      {
-        name: "ARIA — Command Center",
-        description: "Orchestrates all agents, delivers morning briefings, manages the approval queue, and surfaces exactly what needs your attention right now.",
-        deliverables: ["Morning briefing engine (8:30 AM)", "Approval queue with Approve / Edit / Reject", "Agent delegation layer"],
-      },
-      {
-        name: "Tech Lead Agent",
-        description: "Your PM, team lead, and CTO proxy. Handles interns, runs daily standups, generates architecture docs, and reviews PRs via GitHub webhook.",
-        deliverables: ["Standup automation (10 AM)", "Architecture doc generator", "PR review via Claude Sonnet"],
-      },
-      {
-        name: "Ops Agent",
-        description: "Reads every internal Slack message, classifies as Lead / Action / Decision / FYI / Noise, summarises, and drafts your reply in your tone.",
-        deliverables: ["Message classifier", "Reply drafter in your tone", "Decision logger to Supabase"],
-      },
-      {
-        name: "Client Agent — WhatsApp",
-        description: "Handles all WhatsApp client inquiries autonomously — new client pitch, FAQ handling, lead scoring, and automated follow-up sequences.",
-        deliverables: ["New client qualification flow", "Lead scorer (1–10)", "48h → Day 3 → Day 7 follow-up sequence"],
-      },
-      {
-        name: "Calendar Agent",
-        description: "Watches all channels for scheduling signals, proposes slots based on preferred hours, gets your approval, books, and briefs you 30 minutes before every call.",
-        deliverables: ["Scheduling intent detector", "Slot proposer + booking", "Pre-call brief engine"],
-      },
-    ],
-    outcomes: [
-      "Full team standup, PR review, and task assignment handled autonomously",
-      "Client WhatsApp managed 24/7 — humans only approve technical sales",
-      "Entire operating layer runs for $30–55/month on Claude + open-source infra",
-    ],
-    timeline: "7 weeks",
-    role: "Internal build · AI/ML Engineering",
-    year: "2025",
-    tone: "from-orange-500/30 to-yellow-500/10",
-    industry: "Founder Operations",
-    clientType: "Internal Build",
-    focusArea: "Agentic AI Systems",
-    domain: "bhanix.dev/labs",
-    challenge:
-      "Founders and CTOs lose hours every day to standups, client messages, scheduling, and PR reviews — repetitive work that blocks deep thinking. We built a 5-agent system that owns all of it autonomously, with humans only in the approval loop.",
-    solutionsIntro: "Five specialised agents, each with a defined channel and authority level, all coordinated by a central Personal Assistant:",
-    solutions: [
-      {
-        title: "ARIA",
-        description: "Command center. Morning briefings, approval queue, and the single interface between you and all five agents.",
-      },
-      {
-        title: "Tech Lead Agent",
-        description: "Handles the full tech team — standups, blocker detection, architecture docs, and PR reviews via GitHub webhook + Claude.",
-      },
-      {
-        title: "Ops Agent",
-        description: "Classifies every internal message, drafts your reply in your tone, and logs every decision to Supabase.",
-      },
-      {
-        title: "Client + Calendar",
-        description: "Client agent runs WhatsApp 24/7 with autonomous sales and lead scoring. Calendar agent books meetings across all channels.",
-      },
-    ],
-    tools: [
-      { name: "CrewAI", icon: "Bot" },
-      { name: "Claude Sonnet", icon: "MessageSquare" },
-      { name: "ChromaDB", icon: "Database" },
-      { name: "n8n", icon: "Workflow" },
-      { name: "FastAPI", icon: "Zap" },
-      { name: "Supabase", icon: "Server" },
-    ],
-  },
-  {
     slug: "erthaloka",
     company: "Erthaloka",
     tag: "Web3 · IoT · AI . SaaS . Spatial Tech",
@@ -175,7 +87,7 @@ export const caseStudies: CaseStudy[] = [
       { name: "MQTT", icon: "Radio" },
     ],
     feedback: {
-      quote: "Bhanix shipped what most teams only diagram — governance, market, sensors, and reporting, all live, all owned by us.",
+      quote: "BHANIXS shipped what most teams only diagram — governance, market, sensors, and reporting, all live, all owned by us.",
       name: "Erthaloka Core Team",
       role: "Founders, Erthaloka",
     },
@@ -247,6 +159,7 @@ export const caseStudies: CaseStudy[] = [
     clientType: "Web3 Marketplace",
     focusArea: "Commerce + Web3",
     domain: "erthas.exchange",
+    logoUrl: "/logo%27s/Copy%20of%20Erthaloka%20Green%20Logo.png",
     challenge:
       "The Erthaloka ecosystem needed a real marketplace where ErthaCOins could unlock tangible services — from co-living spaces to sustainable travel — with a trust layer of verified organizations and a seamless user experience.",
     solutionsIntro: "We built a full coin-powered marketplace with wallet, discovery, booking, and admin layers:",
@@ -328,6 +241,7 @@ export const caseStudies: CaseStudy[] = [
     clientType: "Web3 Protocol",
     focusArea: "Tokenomics + DeFi",
     domain: "erthanomy.io",
+    logoUrl: "/logo%27s/Copy%20of%20Erthaloka%20Green%20Logo.png",
     challenge:
       "The Erthaloka circular economy needed a native token and decentralised economic infrastructure — payments, salaries, governance, and DeFi — all built transparently on-chain without relying on centralised intermediaries.",
     solutionsIntro: "We built the full on-chain economic layer for the Erthaloka ecosystem:",
@@ -386,7 +300,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "AR / VR",
     clientType: "F&B + AEC Studios",
     focusArea: "Spatial Computing",
-    logoUrl: "/logo%27s/Copy%20of%20FINAL%20LOGO%20APRIL-04.png",
+    logoUrl: "/logo%27s/arteco.png",
     domain: "arteco.studio",
     challenge:
       "Arteco's clients across restaurants and construction needed spatial experiences that worked on the devices people already own — without a six-month build cycle per project.",
@@ -458,6 +372,7 @@ export const caseStudies: CaseStudy[] = [
     clientType: "EdTech Studio",
     focusArea: "Augmented Reality",
     domain: "arteco.studio/ar-edu",
+    logoUrl: "/logo%27s/arteco.png",
     challenge: "Architecture students and educators needed a way to experience real-scale 3D structures in physical space — without expensive hardware or dedicated rooms.",
     solutionsIntro: "We shipped a mobile AR app that brings architectural models into the real world:",
     solutions: [
@@ -525,6 +440,7 @@ export const caseStudies: CaseStudy[] = [
     clientType: "Restaurant Chain",
     focusArea: "Augmented Reality",
     domain: "arteco.studio/ar-menu",
+    logoUrl: "/logo%27s/arteco.png",
     challenge: "Restaurant clients wanted to let diners visualise dishes in 3D before ordering — without replacing physical menus or training staff on complex tech.",
     solutionsIntro: "We built a QR-activated AR menu that works on any phone, on any table:",
     solutions: [
@@ -536,6 +452,9 @@ export const caseStudies: CaseStudy[] = [
       { name: "ARKit", icon: "Smartphone" },
       { name: "ARCore", icon: "Smartphone" },
       { name: "Blender", icon: "Box" },
+    ],
+    screenshots: [
+      { label: "AR Menu — 3D dish anchored on the table", src: "/ar-menu/Screenshot 2026-08-22 181029.png" },
     ],
     videos: [
       { label: "AR Menu — Live Demo", src: "/ar-menu/WhatsApp Video 2026-06-03 at 1.56.45 AM.mp4" },
@@ -584,6 +503,7 @@ export const caseStudies: CaseStudy[] = [
     clientType: "EdTech Studio",
     focusArea: "Virtual Reality",
     domain: "arteco.studio/vr-edu",
+    logoUrl: "/logo%27s/arteco.png",
     challenge: "Educators needed immersive learning experiences accessible without expensive dedicated hardware — students should enter the scene from a classroom browser or a headset.",
     solutionsIntro: "We built WebXR-first VR scenes with a Quest-optimised build path:",
     solutions: [
@@ -646,6 +566,7 @@ export const caseStudies: CaseStudy[] = [
     clientType: "AEC Studio",
     focusArea: "3D Visualization",
     domain: "arteco.studio/3d",
+    logoUrl: "/logo%27s/arteco.png",
     challenge: "Architecture and interior design clients needed a way to show completed-looking spaces to buyers and stakeholders before construction — without expensive on-site mock-ups or static renders.",
     solutionsIntro: "We built a browser-native interactive 3D virtual tour platform:",
     solutions: [
@@ -703,7 +624,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "Marketing / SaaS",
     clientType: "Performance Marketing",
     focusArea: "Agentic AI Systems",
-    logoUrl: "/logo%27s/Copy%20of%20cravent-logo-WORDMARKTAGLINE-1.jpg",
+    logoUrl: "/logo%27s/cravent-logo-trimmed.png",
     domain: "cravent.ai",
     challenge:
       "Cravent's team was drowning in manual campaign ops — briefs, creatives, launches, and reporting across two ad platforms — leaving no time for strategy.",
@@ -783,6 +704,11 @@ export const caseStudies: CaseStudy[] = [
       { name: "AWS", icon: "Cloud" },
       { name: "Postgres", icon: "Database" },
     ],
+    screenshots: [
+      { label: "Homepage — Instant Discounts at Partner Merchants", src: "/travellerstribe/Screenshot 2026-08-22 190007.png" },
+      { label: "How It Works — Merchant to Customer Flow", src: "/travellerstribe/Screenshot 2026-08-22 190024.png" },
+      { label: "Customer Features — Discover, Scan & Pay, Track Savings", src: "/travellerstribe/Screenshot 2026-08-22 190032.png" },
+    ],
   },
   {
     slug: "valonk",
@@ -819,6 +745,7 @@ export const caseStudies: CaseStudy[] = [
     clientType: "Mid-market Retail",
     focusArea: "Cloud + DevOps",
     domain: "valonk.com",
+    logoUrl: "/logo%27s/valonk-logo-trimmed.png",
     challenge:
       "Valonk's storefront was buckling under traffic with 4+ second page loads, brittle deploys, and no real observability — directly costing them conversion.",
     solutionsIntro: "We rebuilt the platform foundations end-to-end:",
@@ -954,59 +881,11 @@ export const caseStudies: CaseStudy[] = [
       { name: "MongoDB", icon: "Database" },
       { name: "Node.js", icon: "Server" },
     ],
-  },
-  {
-    slug: "internal-rnd",
-    company: "Internal R&D",
-    tag: "Internal R&D",
-    category: "R&D",
-    title: "In-house deep-tech accelerators",
-    summary: "AgentOps Console, AR Viewer Toolkit, Web3 Credential Verifier and DeployBot — built for us, productized for clients.",
-    hero: {
-      headline: "Internal R&D — our own deep-tech accelerators",
-      sub: "Four in-house products we run our own ops on, then productize for client engagements.",
-    },
-    stats: [
-      { k: "4", v: "Internal products live" },
-      { k: "Battle-tested", v: "On our own ops" },
-      { k: "Reused", v: "Across client work" },
-    ],
-    stack: ["CrewAI", "WebXR", "Polygon", "FastAPI", "Docker", "GitHub Actions"],
-    services: [
-      { name: "AgentOps Console", description: "Observability and control plane for multi-agent systems in production.", deliverables: ["Agent traces", "Cost dashboards", "Run replay"] },
-      { name: "AR Viewer Toolkit", description: "Drop-in WebXR viewer + asset pipeline for AR product experiences.", deliverables: ["WebXR viewer", "Asset pipeline", "Analytics hooks"] },
-      { name: "Web3 Credential Verifier", description: "Verifiable credentials on Polygon for on-chain proof of attendance/skills.", deliverables: ["Issuance flow", "Verifier app", "Wallet integration"] },
-      { name: "DeployBot", description: "Internal CLI + bot that owns preview, staging, and prod deploys.", deliverables: ["Slack bot", "Preview envs", "Rollback flows"] },
-    ],
-    outcomes: [
-      "Four internal products powering client engagements",
-      "Battle-tested on our own ops before being sold",
-      "Cuts weeks off every new client project",
-    ],
-    timeline: "Ongoing",
-    role: "Internal product",
-    year: "2024–2025",
-    tone: "from-violet-500/30 to-indigo-500/10",
-    industry: "Internal R&D",
-    clientType: "Bhanix Labs",
-    focusArea: "Deep-tech Accelerators",
-    domain: "bhanix.dev/labs",
-    challenge:
-      "Every client engagement was re-solving the same hard problems — agent observability, AR delivery, credential proofs, deploy pipelines. We needed accelerators we owned.",
-    solutionsIntro: "We built four internal products we run our own ops on, then reuse on client work:",
-    solutions: [
-      { title: "AgentOps Console", description: "Observability + control plane for multi-agent systems in production." },
-      { title: "AR Viewer Toolkit", description: "Drop-in WebXR viewer + asset pipeline for AR product experiences." },
-      { title: "Credential Verifier", description: "Verifiable credentials on Polygon for on-chain proof of attendance and skills." },
-      { title: "DeployBot", description: "Internal CLI + bot that owns preview, staging, and prod deploys." },
-    ],
-    tools: [
-      { name: "CrewAI", icon: "Bot" },
-      { name: "WebXR", icon: "Box" },
-      { name: "Polygon", icon: "Hexagon" },
-      { name: "FastAPI", icon: "Zap" },
-      { name: "Docker", icon: "Container" },
-      { name: "GH Actions", icon: "GitBranch" },
+    screenshots: [
+      { label: "Ecosystem Overview — Customer, Partner, Artisan & Investor Views", src: "/vivium/Screenshot 2026-08-10 235822.png" },
+      { label: "Artisan Dashboard — AI Voice-to-Catalog", src: "/vivium/Screenshot 2026-08-11 000605.png" },
+      { label: "Investor Hub — Ecosystem at a Glance", src: "/vivium/Screenshot 2026-08-11 000617.png" },
+      { label: "Enterprise Partner Portal", src: "/vivium/Screenshot 2026-08-11 000900.png" },
     ],
   },
 ];

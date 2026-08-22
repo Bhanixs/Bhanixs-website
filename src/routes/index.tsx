@@ -1,21 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/sections/Hero";
 import { Process } from "@/components/sections/Process";
+import { PatentForEquity } from "@/components/sections/PatentForEquity";
 import { Services } from "@/components/sections/Services";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { Calculator } from "@/components/sections/Calculator";
-import { Pricing } from "@/components/sections/Pricing";
 import { Faq } from "@/components/sections/Faq";
 import { CtaBand } from "@/components/sections/CtaBand";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Bhanix — Deeptech engineering for frontier teams" },
-      { name: "description", content: "Senior squads shipping production AI, robotics, blockchain, and spatial systems. Book a call." },
-      { property: "og:title", content: "Bhanix — Deeptech engineering for frontier teams" },
-      { property: "og:description", content: "Senior squads shipping production AI, robotics, blockchain, and spatial systems." },
+      { title: "BHANIXS — Technology Firm" },
+      { name: "description", content: "Proprietary technology co-building in AI, blockchain, and spatial computing. Patent-for-Equity alignment. Bengaluru · Dubai · Singapore · London." },
+      { property: "og:title", content: "BHANIXS — Technology Firm" },
+      { property: "og:description", content: "Proprietary technology co-building in AI, blockchain, and spatial computing. Patent-for-Equity alignment." },
     ],
   }),
   component: Index,
@@ -26,11 +25,10 @@ function Index() {
     <>
       <Hero />
       <Process />
+      <PatentForEquity />
       <Services />
       <CaseStudies />
       <Testimonials />
-      <Calculator />
-      <Pricing />
       <Faq />
       <CtaBand />
     </>

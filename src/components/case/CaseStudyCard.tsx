@@ -21,7 +21,7 @@ export function CaseStudyCard({ study, index = 0 }: { study: CaseStudy; index?: 
         <div className="px-2 pt-5 pb-3">
           <div className="flex items-center justify-between gap-3">
             <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-              {study.company} · <span className="text-foreground/70 normal-case tracking-normal">{study.domain}</span>
+              {study.company}
             </div>
             <ArrowUpRight className="size-4 text-muted-foreground group-hover:text-foreground transition-colors" />
           </div>

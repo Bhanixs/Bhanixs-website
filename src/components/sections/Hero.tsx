@@ -1,15 +1,7 @@
 import { motion } from "framer-motion";
 import { PillLink } from "@/components/ui/pill-button";
 import { ArrowRight } from "lucide-react";
-
-const logos = [
-  { name: "Erthaloka", src: "/logo%27s/Copy%20of%20Erthaloka%20Green%20Logo.png" },
-  { name: "Arteco", src: "/logo%27s/Copy%20of%20FINAL%20LOGO%20APRIL-04.png" },
-  { name: "Cravent", src: "/logo%27s/Copy%20of%20cravent-logo-WORDMARKTAGLINE-1.jpg" },
-  { name: "Travellers Triibe", src: "/logo%27s/Copy%20of%20Artboard%209%20transparent.png" },
-  { name: "XplorED", src: "/logo%27s/Copy%20of%20Artboard%202.png" },
-  { name: "Vivium", src: "/logo%27s/Copy%20of%20vivium%20logo.jpg.jpeg" },
-];
+import { ClientLogoStrip } from "@/components/case/ClientLogoStrip";
 
 export function Hero() {
   return (
@@ -39,8 +31,8 @@ export function Hero() {
                 transition={{ duration: 0.7, delay: 0.1 }}
                 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.93] tracking-tight"
               >
-                Engineer the future.{" "}
-                <span className="text-foreground/65">Ship the impossible.</span>
+                We build the technology{" "}
+                <span className="text-foreground/65">that makes you impossible to compete with.</span>
               </motion.h1>
 
               <motion.div
@@ -58,27 +50,10 @@ export function Hero() {
         </div>
       </section>
 
-      {/* ── Logo marquee — sits right below the video, no label ── */}
-      <div className="border-b border-border bg-background py-7">
+      {/* ── Logo marquee — sits right below the video ── */}
+      <div className="border-b border-border bg-background py-10">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="relative overflow-hidden">
-            <div className="flex items-center gap-10 whitespace-nowrap animate-marquee">
-              {[...logos, ...logos, ...logos].map((l, i) => (
-                <div
-                  key={i}
-                  className="shrink-0 bg-white rounded-lg px-4 py-2 h-11 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity"
-                >
-                  <img
-                    src={l.src}
-                    alt={l.name}
-                    className="h-full max-w-[120px] object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent" />
-          </div>
+          <ClientLogoStrip label="Companies we have made defensible" />
         </div>
       </div>
     </>

@@ -45,13 +45,14 @@ export function PillButton({
 
 export function PillLink({
   to,
+  hash,
   variant = "primary",
   size = "md",
   className,
   children,
-}: BaseProps & { to: string }) {
+}: BaseProps & { to: string; hash?: string }) {
   return (
-    <Link to={to} className={cn(base, sizes[size], variants[variant], className)}>
+    <Link to={to} hash={hash} className={cn(base, sizes[size], variants[variant], className)}>
       {children}
     </Link>
   );

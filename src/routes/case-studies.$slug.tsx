@@ -23,10 +23,10 @@ export const Route = createFileRoute("/case-studies/$slug")({
   },
   head: ({ loaderData }) => {
     const s = loaderData?.study;
-    if (!s) return { meta: [{ title: "Case study not found — Bhanix" }] };
+    if (!s) return { meta: [{ title: "Case study not found — BHANIXS" }] };
     return {
       meta: [
-        { title: `${s.company} — ${s.title} | Bhanix Case Study` },
+        { title: `${s.company} — ${s.title} | BHANIXS Case Study` },
         { name: "description", content: s.summary },
         { property: "og:title", content: `${s.company} — ${s.title}` },
         { property: "og:description", content: s.summary },
@@ -46,7 +46,7 @@ function NotFoundCase() {
       <h1 className="mt-4 font-display text-4xl">Case study &ldquo;{slug}&rdquo; not found.</h1>
       <p className="mt-4 text-muted-foreground">It may have moved or been renamed.</p>
       <div className="mt-8">
-        <PillLink to="/projects">See all projects</PillLink>
+        <PillLink to="/case-studies">See all case studies</PillLink>
       </div>
     </section>
   );

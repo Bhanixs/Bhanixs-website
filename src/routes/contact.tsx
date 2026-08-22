@@ -15,13 +15,17 @@ import { toast } from "sonner";
 import { useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 
+const CONTACT_EMAIL = "contact@bhanixs.com";
+const CONTACT_PHONE_DISPLAY = "+91 98805 43088";
+const CONTACT_PHONE_HREF = "tel:+919880543088";
+
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Bhanix" },
-      { name: "description", content: "Tell us about the deeptech system you want to build. We respond within 48 hours." },
-      { property: "og:title", content: "Contact — Bhanix" },
-      { property: "og:description", content: "Start a deeptech engagement with Bhanix." },
+      { title: "Contact — BHANIXS" },
+      { name: "description", content: "Tell us about the challenge you are building through. We come back with a focused perspective within 48 hours." },
+      { property: "og:title", content: "Contact — BHANIXS" },
+      { property: "og:description", content: "Start a conversation with BHANIXS." },
     ],
   }),
   component: ContactPage,
@@ -33,13 +37,36 @@ function ContactPage() {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
-    setTimeout(() => {
-      setSending(false);
-      toast.success("Message received", {
-        description: "We'll be in touch within 48 hours.",
-      });
-      (e.target as HTMLFormElement).reset();
-    }, 700);
+
+    const data = new FormData(e.currentTarget);
+    const name = String(data.get("name") ?? "");
+    const company = String(data.get("company") ?? "");
+    const email = String(data.get("email") ?? "");
+    const project = String(data.get("project") ?? "");
+    const budget = String(data.get("budget") ?? "");
+    const message = String(data.get("message") ?? "");
+
+    const subject = `New inquiry from ${name}${company ? ` (${company})` : ""}`;
+    const body = [
+      `Name: ${name}`,
+      `Company: ${company}`,
+      `Work email: ${email}`,
+      project && `Project type: ${project}`,
+      budget && `Budget: ${budget}`,
+      "",
+      "What they're building:",
+      message,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+
+    setSending(false);
+    toast.success("Opening your mail app", {
+      description: `Send it through to finish — addressed to ${CONTACT_EMAIL}.`,
+    });
   };
 
   return (
@@ -58,9 +85,9 @@ function ContactPage() {
             </p>
 
             <div className="mt-12 space-y-5">
-              <Channel icon={Mail} k="Email" v="engage@axon.studio" />
-              <Channel icon={Phone} k="Signal" v="+44 20 4541 0119" />
-              <Channel icon={MapPin} k="HQ" v="London · San Francisco · Berlin" />
+              <Channel icon={Mail} k="Email" v={CONTACT_EMAIL} href={`mailto:${CONTACT_EMAIL}`} />
+              <Channel icon={Phone} k="Phone" v={CONTACT_PHONE_DISPLAY} href={CONTACT_PHONE_HREF} />
+              <Channel icon={MapPin} k="HQ" v="Bengaluru · Dubai · Singapore · London" />
             </div>
           </div>
 
@@ -118,16 +145,52 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   );
 }
 
-function Channel({ icon: Icon, k, v }: { icon: typeof Mail; k: string; v: string }) {
-  return (
-    <div className="flex items-start gap-4 rounded-2xl border border-border-strong bg-surface-card p-5">
+function Channel({
+  icon: Icon,
+  k,
+  v,
+  href,
+  flag,
+}: {
+  icon: typeof Mail;
+  k: string;
+  v: string;
+  href?: string;
+  flag?: string;
+}) {
+  const content = (
+    <>
       <div className="grid size-10 place-items-center rounded-xl bg-primary/15 text-primary-glow ring-1 ring-primary/30">
         <Icon className="size-4" />
       </div>
       <div>
         <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground">{k}</div>
-        <div className="mt-1 font-display tracking-tight">{v}</div>
+        <div className="mt-1 font-display tracking-tight">
+          {v}
+          {flag && (
+            <span className="ml-2 rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 font-mono text-[10px] normal-case tracking-normal text-primary-glow align-middle">
+              {flag}
+            </span>
+          )}
+        </div>
       </div>
+    </>
+  );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        className="flex items-start gap-4 rounded-2xl border border-border-strong bg-surface-card p-5 transition-colors hover:border-primary/50 hover:bg-surface-card-hover"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <div className="flex items-start gap-4 rounded-2xl border border-border-strong bg-surface-card p-5">
+      {content}
     </div>
   );
 }

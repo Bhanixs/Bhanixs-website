@@ -16,10 +16,10 @@ export function CaseStudies() {
             </h2>
           </div>
           <Link
-            to="/projects"
+            to="/case-studies"
             className="inline-flex items-center gap-2 text-sm text-foreground/80 hover:text-foreground border-b border-primary/40 pb-1 self-center md:self-end"
           >
-            See all projects <ArrowUpRight className="size-4" />
+            See all case studies <ArrowUpRight className="size-4" />
           </Link>
         </div>
 

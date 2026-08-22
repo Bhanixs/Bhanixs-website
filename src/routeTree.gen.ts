@@ -9,34 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TeamRouteImport } from './routes/team'
 import { Route as ServicesRouteImport } from './routes/services'
-import { Route as ProjectsRouteImport } from './routes/projects'
-import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
+import { Route as ServicesDomainRouteImport } from './routes/services_.$domain'
 import { Route as CaseStudiesSlugRouteImport } from './routes/case-studies.$slug'
 
-const TeamRoute = TeamRouteImport.update({
-  id: '/team',
-  path: '/team',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProjectsRoute = ProjectsRouteImport.update({
-  id: '/projects',
-  path: '/projects',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PricingRoute = PricingRouteImport.update({
-  id: '/pricing',
-  path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -59,6 +42,11 @@ const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
   path: '/case-studies/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesDomainRoute = ServicesDomainRouteImport.update({
+  id: '/services_/$domain',
+  path: '/services/$domain',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CaseStudiesSlugRoute = CaseStudiesSlugRouteImport.update({
   id: '/case-studies/$slug',
   path: '/case-studies/$slug',
@@ -69,22 +57,18 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/pricing': typeof PricingRoute
-  '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
-  '/team': typeof TeamRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
+  '/services/$domain': typeof ServicesDomainRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/pricing': typeof PricingRoute
-  '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
-  '/team': typeof TeamRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
+  '/services/$domain': typeof ServicesDomainRoute
   '/case-studies': typeof CaseStudiesIndexRoute
 }
 export interface FileRoutesById {
@@ -92,11 +76,9 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/pricing': typeof PricingRoute
-  '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
-  '/team': typeof TeamRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
+  '/services_/$domain': typeof ServicesDomainRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
 }
 export interface FileRouteTypes {
@@ -105,33 +87,27 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
-    | '/pricing'
-    | '/projects'
     | '/services'
-    | '/team'
     | '/case-studies/$slug'
+    | '/services/$domain'
     | '/case-studies/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/contact'
-    | '/pricing'
-    | '/projects'
     | '/services'
-    | '/team'
     | '/case-studies/$slug'
+    | '/services/$domain'
     | '/case-studies'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/contact'
-    | '/pricing'
-    | '/projects'
     | '/services'
-    | '/team'
     | '/case-studies/$slug'
+    | '/services_/$domain'
     | '/case-studies/'
   fileRoutesById: FileRoutesById
 }
@@ -139,42 +115,19 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
-  PricingRoute: typeof PricingRoute
-  ProjectsRoute: typeof ProjectsRoute
   ServicesRoute: typeof ServicesRoute
-  TeamRoute: typeof TeamRoute
   CaseStudiesSlugRoute: typeof CaseStudiesSlugRoute
+  ServicesDomainRoute: typeof ServicesDomainRoute
   CaseStudiesIndexRoute: typeof CaseStudiesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/team': {
-      id: '/team'
-      path: '/team'
-      fullPath: '/team'
-      preLoaderRoute: typeof TeamRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/services': {
       id: '/services'
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projects': {
-      id: '/projects'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pricing': {
-      id: '/pricing'
-      path: '/pricing'
-      fullPath: '/pricing'
-      preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -205,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CaseStudiesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services_/$domain': {
+      id: '/services_/$domain'
+      path: '/services/$domain'
+      fullPath: '/services/$domain'
+      preLoaderRoute: typeof ServicesDomainRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/case-studies/$slug': {
       id: '/case-studies/$slug'
       path: '/case-studies/$slug'
@@ -219,11 +179,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
-  PricingRoute: PricingRoute,
-  ProjectsRoute: ProjectsRoute,
   ServicesRoute: ServicesRoute,
-  TeamRoute: TeamRoute,
   CaseStudiesSlugRoute: CaseStudiesSlugRoute,
+  ServicesDomainRoute: ServicesDomainRoute,
   CaseStudiesIndexRoute: CaseStudiesIndexRoute,
 }
 export const routeTree = rootRouteImport

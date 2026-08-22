@@ -6,11 +6,8 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { to: "/services", label: "Services" },
-  { to: "/projects", label: "Projects" },
   { to: "/case-studies", label: "Case Studies" },
-  { to: "/pricing", label: "Pricing" },
   { to: "/about", label: "About" },
-  { to: "/team", label: "Team" },
 ];
 
 export function PillNav() {
@@ -37,10 +34,12 @@ export function PillNav() {
             to="/"
             className="flex items-center gap-2 rounded-2xl bg-card/70 backdrop-blur-xl border border-border px-3.5 py-2.5 shadow-[var(--shadow-card)]"
           >
-            <span className="grid size-7 place-items-center rounded-md bg-primary shadow-[var(--shadow-glow)]">
-              <span className="block size-3 rounded-sm bg-primary-foreground/90" />
-            </span>
-            <span className="font-display font-semibold tracking-tight">Bhanix</span>
+            <img
+              src="/brand/bhanixs-mark.png"
+              alt=""
+              className="size-7 object-contain"
+            />
+            <span className="font-display font-semibold tracking-tight">BHANIXS</span>
           </Link>
 
           <nav className="hidden md:flex items-center rounded-full bg-card/70 backdrop-blur-xl border border-border px-2 py-2 shadow-[var(--shadow-card)]">
@@ -74,8 +73,9 @@ export function PillNav() {
       {open && (
         <div className="fixed inset-0 z-[60] bg-background/95 backdrop-blur-xl animate-in fade-in">
           <div className="flex items-center justify-between px-6 pt-6">
-            <Link to="/" onClick={() => setOpen(false)} className="font-display font-semibold text-lg">
-              Bhanix
+            <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-2 font-display font-semibold text-lg">
+              <img src="/brand/bhanixs-mark.png" alt="" className="size-6 object-contain" />
+              BHANIXS
             </Link>
             <button
               onClick={() => setOpen(false)}

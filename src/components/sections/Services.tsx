@@ -1,34 +1,31 @@
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { motion } from "framer-motion";
-import { Brain, Cpu, Boxes, Glasses } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { Brain, Boxes, Glasses, ArrowRight } from "lucide-react";
 
 const services = [
   {
+    slug: "ai",
     icon: Brain,
-    title: "Production AI Systems",
-    body: "Custom transformer training, RAG pipelines, computer vision, evals, and inference infra ready for production scale.",
-    chips: ["LLM Fine-tuning", "Computer Vision", "RAG", "Evals"],
+    title: "Artificial Intelligence & Machine Learning",
+    body: "Generative AI, LLM deployment, computer vision, NLP, predictive analytics, edge AI, and MLOps — product intelligence and decision systems built for production, not a demo.",
+    chips: ["Generative AI", "LLM Deployment", "RAG", "MLOps"],
     mock: <ModelMock />,
   },
   {
-    icon: Cpu,
-    title: "Intelligent Automation",
-    body: "Real-time control, sensor fusion, ROS2 stacks, and edge inference — from prototype to fleet deployment.",
-    chips: ["ROS2", "Sensor Fusion", "FPGA", "Edge AI"],
-    mock: <TelemetryMock />,
-  },
-  {
+    slug: "blockchain",
     icon: Boxes,
-    title: "Web3 & On-chain",
-    body: "ZK-rollups, smart-contract audits, institutional-grade protocols and on-chain primitives that hold up.",
-    chips: ["ZK Rollups", "Solidity", "Audits", "L2"],
+    title: "Blockchain & Distributed Ledger Technology",
+    body: "Smart contracts, DeFi infrastructure, NFT architecture, DAO structures, and Web3 product development — trust infrastructure clients own outright.",
+    chips: ["Smart Contracts", "DeFi", "DAO Structures", "Tokenisation"],
     mock: <ChainMock />,
   },
   {
+    slug: "ar-vr",
     icon: Glasses,
-    title: "Spatial Computing",
-    body: "Industrial digital twins, immersive training simulations, and spatial computing interfaces for Vision Pro and Quest.",
-    chips: ["Unreal 5", "WebXR", "Digital Twins", "VisionOS"],
+    title: "Augmented & Virtual Reality",
+    body: "Spatial computing, mixed reality, XR product development, and 3D environment engineering — training simulations, immersive commerce, and industrial AR.",
+    chips: ["Spatial Computing", "Mixed Reality", "XR Product", "3D Engineering"],
     mock: <SpatialMock />,
   },
 ];
@@ -42,21 +39,6 @@ function ModelMock() {
       </div>
       <div className="flex justify-between"><span>val_acc</span><span className="text-foreground">0.948</span></div>
       <div className="flex justify-between"><span>tokens/sec</span><span className="text-foreground">28,412</span></div>
-    </div>
-  );
-}
-
-function TelemetryMock() {
-  const bars = [40, 65, 55, 80, 45, 70, 60, 90, 50, 75];
-  return (
-    <div className="flex items-end gap-1 h-16">
-      {bars.map((h, i) => (
-        <div
-          key={i}
-          className="flex-1 bg-gradient-to-t from-primary/30 to-primary-glow/80 rounded-sm"
-          style={{ height: `${h}%`, animation: `pulse-soft 1.${i}s ease-in-out infinite` }}
-        />
-      ))}
     </div>
   );
 }
@@ -99,14 +81,15 @@ export function Services() {
             </h2>
           </div>
           <p className="max-w-md text-muted-foreground text-pretty">
-            Four verticals, one senior team. Every engagement ships production
-            code — not slide decks.
+            Three domains, one senior team. Every engagement ships proprietary,
+            production code — not slide decks.
           </p>
         </div>
 
         <div className="mt-16 grid gap-5 md:grid-cols-2">
           {services.map((s, i) => {
             const Icon = s.icon;
+            const isWide = i === services.length - 1 && services.length % 2 === 1;
             return (
               <motion.div
                 key={s.title}
@@ -114,30 +97,42 @@ export function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: (i % 2) * 0.1 }}
-                className="group relative rounded-3xl border border-border-strong bg-surface-card p-8 overflow-hidden hover:border-primary/40 transition-all hover:bg-surface-card-hover shadow-[inset_0_1px_0_0_oklch(1_0_0_/_0.06),0_10px_40px_-20px_oklch(0_0_0_/_0.8)]"
+                className={isWide ? "md:col-span-2" : ""}
               >
-                <div className="absolute -right-20 -top-20 size-48 rounded-full bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <Link
+                  to="/services/$domain"
+                  params={{ domain: s.slug }}
+                  className="group relative block rounded-3xl border border-border-strong bg-surface-card p-8 overflow-hidden hover:border-primary/40 transition-all hover:bg-surface-card-hover shadow-[inset_0_1px_0_0_oklch(1_0_0_/_0.06),0_10px_40px_-20px_oklch(0_0_0_/_0.8)]"
+                >
+                  <div className="absolute -right-20 -top-20 size-48 rounded-full bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                <div className="relative rounded-2xl border border-border-strong bg-background/80 p-5 mb-8">
-                  {s.mock}
-                </div>
+                  <div className={isWide ? "relative grid md:grid-cols-2 gap-8 items-center" : ""}>
+                    <div className={`relative rounded-2xl border border-border-strong bg-background/80 p-5 ${isWide ? "md:order-2" : "mb-8"}`}>
+                      {s.mock}
+                    </div>
 
-                <div className="relative flex items-start gap-4">
-                  <div className="grid size-11 shrink-0 place-items-center rounded-xl bg-primary/15 ring-1 ring-primary/30 text-primary-glow">
-                    <Icon className="size-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-2xl tracking-tight">{s.title}</h3>
-                    <p className="mt-3 text-muted-foreground leading-relaxed">{s.body}</p>
-                    <div className="mt-5 flex flex-wrap gap-2">
-                      {s.chips.map((c) => (
-                        <span key={c} className="text-[10px] font-mono tracking-widest uppercase text-muted-foreground border border-border rounded-full px-2.5 py-1">
-                          {c}
-                        </span>
-                      ))}
+                    <div className="relative flex items-start gap-4">
+                      <div className="grid size-11 shrink-0 place-items-center rounded-xl bg-primary/15 ring-1 ring-primary/30 text-primary-glow">
+                        <Icon className="size-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-display text-2xl tracking-tight">{s.title}</h3>
+                        <p className="mt-3 text-muted-foreground leading-relaxed">{s.body}</p>
+                        <div className="mt-5 flex flex-wrap gap-2">
+                          {s.chips.map((c) => (
+                            <span key={c} className="text-[10px] font-mono tracking-widest uppercase text-muted-foreground border border-border rounded-full px-2.5 py-1">
+                              {c}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-primary-glow">
+                          Explore domain
+                          <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </motion.div>
             );
           })}

@@ -75,16 +75,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Bhanix — Deeptech engineering studio" },
-      { name: "description", content: "Bhanix is a deeptech engineering studio building production AI, robotics, blockchain, and spatial systems for frontier teams." },
-      { name: "author", content: "Bhanix" },
-      { property: "og:title", content: "Bhanix — Deeptech engineering studio" },
-      { property: "og:description", content: "Production AI, robotics, blockchain, and spatial systems for frontier teams." },
+      { title: "BHANIXS — Technology Firm" },
+      { name: "description", content: "BHANIXS builds proprietary, patent-backed technology in AI, blockchain, and spatial computing — as an embedded technical co-builder, not an external vendor." },
+      { name: "author", content: "Bhanixs Group" },
+      { property: "og:title", content: "BHANIXS — Technology Firm" },
+      { property: "og:description", content: "Proprietary technology co-building with Patent-for-Equity alignment. Bengaluru · Dubai · Singapore · London." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
     links: [
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "icon", type: "image/png", href: "/brand/favicon-512.png" },
+      { rel: "apple-touch-icon", href: "/brand/favicon-512.png" },
       {
         rel: "stylesheet",
         href: appCss,

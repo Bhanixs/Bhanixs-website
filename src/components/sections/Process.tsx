@@ -15,10 +15,10 @@ type Step = {
 
 function MockBrief() {
   const rows = [
-    { label: "Project", value: "Autonomous warehouse fleet" },
-    { label: "Stack", value: "ROS 2 · Rust · CUDA" },
-    { label: "Timeline", value: "12 weeks → mainnet" },
-    { label: "Budget", value: "$240k engagement" },
+    { label: "Vertical", value: "AI · Blockchain · AR/VR" },
+    { label: "Model", value: "Patent-for-Equity" },
+    { label: "Timeline", value: "1–2 week assessment" },
+    { label: "NDA", value: "Signed day one" },
   ];
   return (
     <div className="rounded-2xl border border-border bg-background/60 backdrop-blur p-5 shadow-[var(--shadow-card)]">
@@ -166,26 +166,26 @@ function MockLaunch() {
 const steps: Step[] = [
   {
     n: "01",
-    tag: "Discover",
-    title: "Share your vision.",
+    tag: "Assess",
+    title: "Technology audit & strategic assessment.",
     body:
-      "Tell us what you're building — the problem, the constraints, the stack. We sign mutual NDA on day one and align on outcomes inside a week.",
+      "We understand your business before we touch the technology — vision, current state, market context. NDA on day one. The audit determines the exact architecture and proprietary assets required, in 1–2 weeks.",
     mock: <MockBrief />,
   },
   {
     n: "02",
-    tag: "Engineer",
-    title: "We engineer the system.",
+    tag: "Co-Build",
+    title: "Proprietary technology co-build.",
     body:
-      "A senior squad ships architecture, prototypes, and production code in tight cycles. Weekly demos. You own everything from day one.",
+      "A senior squad ships architecture, prototypes, and production code in tight cycles — designed for defensibility from day one, not bolted on after. Weekly demos. You see everything.",
     mock: <MockEngineering />,
   },
   {
     n: "03",
-    tag: "Launch",
-    title: "Launch and scale.",
+    tag: "Scale",
+    title: "Scale & strategic support.",
     body:
-      "We harden, observability-wrap and hand over with full runbooks. Continued retainer for evolution, on-call, or new verticals.",
+      "We stay embedded — supporting scaling, architecture evolution, and technical decision-making. This is where the engagement becomes a long-term partnership, not a handoff.",
     mock: <MockLaunch />,
   },
 ];
