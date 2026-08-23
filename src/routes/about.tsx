@@ -61,7 +61,7 @@ const principles = [
   { k: "Co-builders, not contractors", v: "We hold equity in what we build. Our success is yours.", icon: Handshake },
 ];
 
-const locations = ["Bengaluru (HQ)", "Dubai", "Singapore", "London"];
+const locations = ["Bengaluru"];
 
 const team = [
   {
@@ -295,9 +295,9 @@ function AboutPage() {
       <section className="border-t border-border py-24">
         <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           <div>
-            <Eyebrow>Locations</Eyebrow>
+            <Eyebrow>Location</Eyebrow>
             <h2 className="mt-4 font-display text-3xl sm:text-5xl tracking-tight">
-              Distributed by design.
+              Based in Bengaluru.
             </h2>
           </div>
           <div className="flex flex-wrap gap-3">

@@ -87,7 +87,7 @@ function ContactPage() {
             <div className="mt-12 space-y-5">
               <Channel icon={Mail} k="Email" v={CONTACT_EMAIL} href={`mailto:${CONTACT_EMAIL}`} />
               <Channel icon={Phone} k="Phone" v={CONTACT_PHONE_DISPLAY} href={CONTACT_PHONE_HREF} />
-              <Channel icon={MapPin} k="HQ" v="Bengaluru · Dubai · Singapore · London" />
+              <Channel icon={MapPin} k="HQ" v="Bengaluru" />
             </div>
           </div>
 

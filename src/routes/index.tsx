@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "BHANIXS — Technology Firm" },
-      { name: "description", content: "Proprietary technology co-building in AI, blockchain, and spatial computing. Patent-for-Equity alignment. Bengaluru · Dubai · Singapore · London." },
+      { name: "description", content: "Proprietary technology co-building in AI, blockchain, and spatial computing. Patent-for-Equity alignment. Based in Bengaluru." },
       { property: "og:title", content: "BHANIXS — Technology Firm" },
       { property: "og:description", content: "Proprietary technology co-building in AI, blockchain, and spatial computing. Patent-for-Equity alignment." },
     ],
