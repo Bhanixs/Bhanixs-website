@@ -211,13 +211,13 @@ function StickyCard({ step, index, total }: { step: Step; index: number; total: 
     >
       <motion.article
         style={{ scale, opacity }}
-        className="relative grid md:grid-cols-2 gap-8 md:gap-12 items-center rounded-3xl border border-border bg-card/80 backdrop-blur-xl p-8 md:p-12 overflow-hidden shadow-[var(--shadow-card)]"
+        className="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center rounded-3xl border border-border bg-card/80 backdrop-blur-xl p-8 md:p-12 overflow-hidden shadow-[var(--shadow-card)]"
       >
         {/* glow */}
         <div className="pointer-events-none absolute -right-24 -top-24 size-72 rounded-full bg-primary/20 blur-3xl" />
         <div className="pointer-events-none absolute -left-24 -bottom-24 size-72 rounded-full bg-primary-glow/10 blur-3xl" />
 
-        <div className="relative">
+        <div className="relative min-w-0">
           <div className="flex items-center gap-3">
             <span className="grid place-items-center size-10 rounded-full bg-primary text-primary-foreground font-display text-sm">
               {step.n}
@@ -234,7 +234,7 @@ function StickyCard({ step, index, total }: { step: Step; index: number; total: 
           </p>
         </div>
 
-        <div className="relative">{step.mock}</div>
+        <div className="relative min-w-0">{step.mock}</div>
       </motion.article>
     </div>
   );
