@@ -7,6 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { Analytics } from "@vercel/analytics/react";
 
 import appCss from "../styles.css?url";
 import { PillNav } from "@/components/layout/PillNav";
@@ -139,6 +140,7 @@ function RootComponent() {
       </main>
       <Footer />
       <Toaster />
+      <Analytics />
     </QueryClientProvider>
   );
 }
