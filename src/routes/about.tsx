@@ -63,12 +63,6 @@ const principles = [
 
 const locations = ["Bengaluru (HQ)", "Dubai", "Singapore", "London"];
 
-const openRoles = [
-  "Lead — AI & ML",
-  "Lead — Blockchain",
-  "Lead — AR/VR & Spatial",
-];
-
 const team = [
   {
     name: "Surya Prakash",
@@ -292,20 +286,6 @@ function AboutPage() {
                     LinkedIn
                   </a>
                 </div>
-              </div>
-            ))}
-
-            {openRoles.map((role) => (
-              <div key={role} className="rounded-3xl border border-dashed border-border-strong p-8">
-                <div className="grid size-16 place-items-center rounded-2xl bg-secondary/40 text-muted-foreground font-mono text-xs uppercase tracking-widest">
-                  Open
-                </div>
-                <h3 className="mt-6 font-display text-xl tracking-tight text-foreground/80">
-                  {role}
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  We&rsquo;re growing the team — this role is being filled.
-                </p>
               </div>
             ))}
           </div>
