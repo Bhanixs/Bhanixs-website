@@ -23,8 +23,8 @@ function ServicesPage() {
     <>
       <section className="relative pt-44 pb-16 overflow-hidden">
         <div className="absolute inset-0 hero-gradient pointer-events-none" />
-        <div className="relative mx-auto max-w-7xl px-6 grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
-          <div>
+        <div className="relative mx-auto max-w-7xl px-6 grid grid-cols-1 gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+          <div className="min-w-0">
             <Eyebrow>Services</Eyebrow>
             <h1 className="mt-5 font-display text-5xl sm:text-7xl tracking-tight leading-[1] text-balance max-w-4xl">
               Three domains. <span className="text-foreground/70">Infinite defensibility.</span>
