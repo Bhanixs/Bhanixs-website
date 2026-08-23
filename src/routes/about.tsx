@@ -269,25 +269,29 @@ function AboutPage() {
 
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {team.map((member) => (
-              <div key={member.name} className="rounded-3xl border border-primary/30 bg-surface-card p-8">
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="size-16 rounded-2xl object-cover ring-1 ring-primary/30"
-                />
-                <h3 className="mt-6 font-display text-xl tracking-tight">
-                  {member.name}
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground">{member.role}</p>
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-primary-glow hover:text-primary transition-colors"
-                >
-                  <Linkedin className="size-3.5" />
-                  LinkedIn
-                </a>
+              <div key={member.name} className="overflow-hidden rounded-3xl border border-primary/30 bg-surface-card">
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display text-xl tracking-tight">
+                    {member.name}
+                  </h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{member.role}</p>
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-primary-glow hover:text-primary transition-colors"
+                  >
+                    <Linkedin className="size-3.5" />
+                    LinkedIn
+                  </a>
+                </div>
               </div>
             ))}
 
