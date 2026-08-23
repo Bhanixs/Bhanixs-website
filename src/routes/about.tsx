@@ -12,6 +12,7 @@ import {
   FileCheck,
   Infinity as InfinityIcon,
   MapPin,
+  Linkedin,
 } from "lucide-react";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -66,6 +67,27 @@ const openRoles = [
   "Lead — AI & ML",
   "Lead — Blockchain",
   "Lead — AR/VR & Spatial",
+];
+
+const team = [
+  {
+    name: "Surya Prakash",
+    role: "Founder & CEO",
+    img: "/team/surya.png",
+    linkedin: "https://www.linkedin.com/in/surya-bhandari23/",
+  },
+  {
+    name: "Nuthan B",
+    role: "CTO",
+    img: "/team/team-nuthan-b.jpg",
+    linkedin: "https://www.linkedin.com/in/nuthanb/",
+  },
+  {
+    name: "K Vigneshwar",
+    role: "CMO",
+    img: "/team/vignesh.png",
+    linkedin: "https://www.linkedin.com/in/k-vigneshwar-692531149/",
+  },
 ];
 
 const models = [
@@ -241,23 +263,33 @@ function AboutPage() {
             </h2>
             <p className="mt-4 text-muted-foreground text-pretty leading-relaxed">
               We show real names and real roles — never AI-generated avatars
-              or unverifiable pedigree claims. Full profiles are being
-              finalised for publication here.
+              or unverifiable pedigree claims.
             </p>
           </div>
 
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-3xl border border-primary/30 bg-surface-card p-8 lg:col-span-1">
-              <div className="grid size-16 place-items-center rounded-2xl bg-primary/15 ring-1 ring-primary/30 text-primary-glow font-display text-xl">
-                DB
+            {team.map((member) => (
+              <div key={member.name} className="rounded-3xl border border-primary/30 bg-surface-card p-8">
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="size-16 rounded-2xl object-cover ring-1 ring-primary/30"
+                />
+                <h3 className="mt-6 font-display text-xl tracking-tight">
+                  {member.name}
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground">{member.role}</p>
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-primary-glow hover:text-primary transition-colors"
+                >
+                  <Linkedin className="size-3.5" />
+                  LinkedIn
+                </a>
               </div>
-              <h3 className="mt-6 font-display text-xl tracking-tight">
-                Founder &amp; CEO
-              </h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Name and profile publishing shortly.
-              </p>
-            </div>
+            ))}
 
             {openRoles.map((role) => (
               <div key={role} className="rounded-3xl border border-dashed border-border-strong p-8">
